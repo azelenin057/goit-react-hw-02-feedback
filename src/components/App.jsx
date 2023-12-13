@@ -20,10 +20,9 @@ export class App extends Component {
     return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   };
 
-  handleLeaveFeedback = event => {
-    const { textContent } = event.target;
-    this.setState(state => ({ [textContent]: state[textContent] + 1 }));
-    console.dir(event.target);
+  handleLeaveFeedback = option => {
+    this.setState(state => ({ [option]: state[option] + 1 }));
+    console.dir();
   };
 
   render() {
